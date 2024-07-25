@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>WebBleTest</title>
+</head>
+<body>
+
+    <button onclick="scan()">scan</button>
+
+    <script type="text/javascript">
+    function scan() {
+        navigator.bluetooth.requestDevice({
+        acceptAllDevices: true
+        })
+        .catch(error => console.log(error))
+    }
+    </script>
+
+</body>
+</html>
